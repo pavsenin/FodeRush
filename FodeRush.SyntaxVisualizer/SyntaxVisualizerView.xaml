@@ -1,0 +1,80 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:local="clr-namespace:ViewModels;assembly=FodeRush.SyntaxVisualizer"
+    xmlns:converters="clr-namespace:Converters;assembly=FodeRush.SyntaxVisualizer"
+    xmlns:fsxaml="http://github.com/fsprojects/FsXaml">
+    <UserControl.Resources>
+        <converters:BoolToCollapseVisibleConverter x:Key="boolToCollapseVisibleConverter"/>
+        <converters:SelectedItemChangedConverter x:Key="selectedItemChangedConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderThickness="1,1,1,0" BorderBrush="#FF828790" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" VerticalAlignment="Center" Content="Syntax Tree" FontWeight="Bold"/>
+            </Grid>
+        </Border>
+        <TreeView Grid.Row="1" Name="treeView" Padding="5" 
+                  VirtualizingPanel.IsVirtualizing="True"
+                  ItemsSource="{Binding SyntaxTree}">
+            <TreeView.Resources>
+                <HierarchicalDataTemplate 
+                    DataType="{x:Type local:NodeViewModel}"
+                    ItemsSource="{Binding Children}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding DisplayName}" Foreground="{Binding Foreground}" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectedItemChanged">
+                    <fsxaml:EventToCommand Command="{Binding SelectedItemChangedCommand}"
+                                           EventArgsConverter="{StaticResource selectedItemChangedConverter}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TreeView>
+        <GridSplitter Grid.Row="2" ResizeDirection="Rows" HorizontalAlignment="Stretch" Height="5"/>
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" BorderThickness="1,1,1,0" Visibility="{Binding PropertiesVisible, Converter={StaticResource boolToCollapseVisibleConverter}}"
+                    BorderBrush="#FF828790" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Properties" FontWeight="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="0" Name="typeDesc" Content="Type" Padding="5,2,5,2" />
+                    <Label Grid.Row="1" Grid.Column="1" Name="typeValue" Padding="5,2,5,2" Content="{Binding SelectedNodeType}" />
+                    <Label Grid.Row="2" Grid.Column="0" Name="astDesc" Content="Ast" Padding="5,2,5,2" />
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                        <Label Name="astValue" Padding="5,2,5,2" Content="{Binding SelectedNodeAst}" />
+                        <Button Name="showFullAst" Content="..." Command="{Binding ShowFullAstCommand}"
+                                Visibility="{Binding ShowFullAst, Converter={StaticResource boolToCollapseVisibleConverter}}" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <ContentControl Grid.Row="1" Padding="5" Content="{Binding PropertyHost}" />
+        </Grid>
+    </Grid>
+</UserControl>

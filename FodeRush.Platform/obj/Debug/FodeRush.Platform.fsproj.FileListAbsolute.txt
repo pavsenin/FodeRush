@@ -1,0 +1,5 @@
+D:\git\pavsenin\FodeRush\Bin\Debug\FodeRush.Platform.dll
+D:\git\pavsenin\FodeRush\Bin\Debug\FodeRush.Platform.pdb
+D:\git\pavsenin\FodeRush\FodeRush.Platform\obj\Debug\FodeRush.Platform.dll
+D:\git\pavsenin\FodeRush\FodeRush.Platform\obj\Debug\FodeRush.Platform.pdb
+D:\git\pavsenin\FodeRush\FodeRush.Platform\obj\Debug\FodeRush.Platform.fsprojResolveAssemblyReference.cache

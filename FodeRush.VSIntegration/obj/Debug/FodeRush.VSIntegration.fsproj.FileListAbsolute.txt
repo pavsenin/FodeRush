@@ -1,0 +1,5 @@
+D:\git\pavsenin\FodeRush\Bin\Debug\FodeRush.VSIntegration.dll
+D:\git\pavsenin\FodeRush\Bin\Debug\FodeRush.VSIntegration.pdb
+D:\git\pavsenin\FodeRush\FodeRush.VSIntegration\obj\Debug\FodeRush.VSIntegration.dll
+D:\git\pavsenin\FodeRush\FodeRush.VSIntegration\obj\Debug\FodeRush.VSIntegration.pdb
+D:\git\pavsenin\FodeRush\FodeRush.VSIntegration\obj\Debug\FodeRush.VSIntegration.fsprojResolveAssemblyReference.cache

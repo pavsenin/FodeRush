@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>FodeRush.Foundation</name></assembly>
+<members>
+<member name="P:EventHandling.DocumentEventListener.SkipTimerDelay(System.Boolean)">
+<summary>
+ Skip all timer events in order to test events instantaneously
+</summary>
+</member>
+<member name="P:EventHandling.DocumentEventListener.SkipTimerDelay">
+<summary>
+ Skip all timer events in order to test events instantaneously
+</summary>
+</member>
+<member name="M:EventHandling.Async.StartInThreadPoolSafe.Static(Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit},Microsoft.FSharp.Core.FSharpOption{System.Threading.CancellationToken})">
+<summary>
+ An equivalence of Async.Start which catches and logs raised exceptions
+</summary>
+</member>
+<member name="M:EventHandling.Async.StartImmediateSafe.Static(Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit},Microsoft.FSharp.Core.FSharpOption{System.Threading.CancellationToken})">
+<summary>
+ An equivalence of Async.StartImmediate which catches and logs raised exceptions
+</summary>
+</member>
+<member name="M:EventHandling.protect(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Try to run a given function and catch its exceptions
+</summary>
+</member>
+<member name="M:EventHandling.protectOrDefault``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,``0},``0)">
+<summary>
+ Try to run a given function, resorting to a default value if it throws exceptions
+</summary>
+</member>
+<member name="M:Utils.OptionModule.flatten``1(Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Core.FSharpOption{``0}})">
+<summary>
+ Some(Some x) -&gt; Some x | None -&gt; None
+</summary>
+</member>
+<member name="M:Utils.OptionModule.orTry``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.FSharpOption{``0}},Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Gets the option if Some x, otherwise try to get another value
+</summary>
+</member>
+<member name="M:Utils.OptionModule.getOrTry``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,``0},Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Gets the value if Some x, otherwise try to get another value by calling a function
+</summary>
+</member>
+<member name="M:Utils.OptionModule.orElse``1(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Gets the option if Some x, otherwise the supplied default value.
+</summary>
+</member>
+<member name="M:Utils.OptionModule.getOrElse``1(``0,Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Gets the value associated with the option or the supplied default value.
+</summary>
+</member>
+</members>
+</doc>

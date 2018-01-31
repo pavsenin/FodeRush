@@ -1,0 +1,24 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="aac6f89e-f7c7-444f-8d15-7b998bdfcbfa" Version="0.0.1" Language="en-US" Publisher="Pavel Avsenin" />
+    <DisplayName>FodeRush</DisplayName>
+    <Description xml:space="preserve">F# productivity tool</Description>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" Version="[14.0]" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="FodeRush.Package.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="FodeRush.Platform.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="FodeRush.VSIntegration.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="FodeRush.SyntaxVisualizer.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="FodeRush.Foundation.dll" />
+  </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.Net.Component.4.6.TargetingPack" Version="[15.0.26621.2,16.0)" DisplayName=".NET Framework 4.6 targeting pack" />
+  </Prerequisites>
+</PackageManifest>

@@ -1,0 +1,11 @@
+D:\git\pavsenin\FodeRush\Bin\Debug\FodeRush.SyntaxVisualizer.pdb
+D:\git\pavsenin\FodeRush\Bin\Debug\FodeRush.SyntaxVisualizer.exe.config
+D:\git\pavsenin\FodeRush\Bin\Debug\FodeRush.SyntaxVisualizer.exe
+D:\git\pavsenin\FodeRush\FodeRush.SyntaxVisualizer\obj\Debug\FodeRush.SyntaxVisualizer.fsprojResolveAssemblyReference.cache
+D:\git\pavsenin\FodeRush\FodeRush.SyntaxVisualizer\obj\Debug\FodeRush.SyntaxVisualizer.g.resources
+D:\git\pavsenin\FodeRush\FodeRush.SyntaxVisualizer\Bin\Debug\FodeRush.SyntaxVisualizer.dll
+D:\git\pavsenin\FodeRush\FodeRush.SyntaxVisualizer\Bin\Debug\FodeRush.SyntaxVisualizer.pdb
+D:\git\pavsenin\FodeRush\FodeRush.SyntaxVisualizer\Bin\Debug\FodeRush.Platform.dll
+D:\git\pavsenin\FodeRush\FodeRush.SyntaxVisualizer\Bin\Debug\FodeRush.Platform.pdb
+D:\git\pavsenin\FodeRush\FodeRush.SyntaxVisualizer\obj\Debug\FodeRush.SyntaxVisualizer.dll
+D:\git\pavsenin\FodeRush\FodeRush.SyntaxVisualizer\obj\Debug\FodeRush.SyntaxVisualizer.pdb
